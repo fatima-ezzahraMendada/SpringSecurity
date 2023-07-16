@@ -53,7 +53,9 @@
                     <li th:each="page,status:${pages}">
                         <!-- quand je clique sur le button j'envois une requete vers index avec le parametre page avec sa valeur status index -->
                         <a th:href="@{/user/index(page=${status.index},keyword=${keyword})}"
+
                            th:class="${currentPage==status.index?'btn btn-info ms-1':'btn btn-outline-info ms-1'}"
+
                            th:text="${status.index}+1">
                         </a>
                     </li>
